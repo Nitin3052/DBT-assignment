@@ -1,0 +1,25 @@
+USE NB;
+SELECT * FROM ORDERS
+WHERE AMT >1000;
+
+SELECT SNAME,CITY FROM SALESPEOPLE
+WHERE CITY = 'LONDON'
+AND COMM >0.10;
+
+SELECT  * FROM CUSTOMERS
+WHERE RATING >100 
+OR CITY = 'ROME';
+
+SELECT *FROM  ORDERS
+ WHERE (amt < 1000 OR
+ NOT (odate = '1990-10-03'
+ AND cnum > 3005)); 
+ 
+ SELECT * FROM ORDERS
+ WHERE NOT ((odate = '1990-10-03'
+ OR snum >1006) 
+ AND amt>= 1500); 
+ 
+ SELECT snum, sname, city, comm 
+FROM Salespeople
+WHERE (comm > .12 OR comm < .14);
